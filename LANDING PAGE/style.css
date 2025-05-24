@@ -1,0 +1,130 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  color: white;
+  overflow-x: hidden;
+  background-color: #000;
+}
+
+/* Background Video */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+/* Navbar */
+nav#navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+nav.scrolled {
+  background-color: #111;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.nav-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: red;
+}
+
+.nav-links a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: red;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: darkred;
+}
+
+/* Sections */
+.section {
+  padding: 100px 2rem;
+  background-color: #111;
+  text-align: center;
+  min-height: 100vh;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section h2 {
+  font-size: 2rem;
+  color: red;
+  margin-bottom: 1rem;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Footer */
+footer {
+  background-color: black;
+  text-align: center;
+  padding: 1rem;
+  color: white;
+}
